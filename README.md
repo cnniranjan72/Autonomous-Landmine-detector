@@ -1,53 +1,52 @@
 # 🚀 Autonomous Landmine Detection System
 
 ## 🔍 Overview
-An intelligent **autonomous landmine detection system** that leverages **deep learning (CNNs)** to detect and classify buried landmines.  
-The system processes data from **Ground-Penetrating Radar (GPR)** and **magnetometry sensors**, designed for deployment on **UAVs (drones)** or **ground robots** for safe, real-time mine detection.
+An intelligent **autonomous landmine detection system** that leverages **machine learning** to detect and classify buried landmines using **Ground-Penetrating Radar (GPR)** data.  
+The system is designed for **safe, real-time mine detection** and can be integrated into UAVs (drones) or ground robots.
 
 ---
 
 ## 🎯 Key Features
-- 🛰️ Integration with **GPR & magnetometry sensors**  
-- 🤖 **CNN-based detection** for high accuracy  
-- 🌍 Works under **different soil conditions & mine types**  
-- ⚡ **Real-time processing** for on-field operations  
-- 🚁 Deployment-ready for **UAVs & ground robots**  
-- 📍 **GPS tagging & geospatial mapping** of mine locations  
-- 🔒 Reduced **false positives** for enhanced safety  
+- 🛰️ Works with **GPR sensor data**  
+- 🤖 **Machine learning-based detection** for high accuracy  
+- 🌍 Handles **different soil conditions & mine types**  
+- ⚡ **Real-time prediction** for field operations  
+- 🚁 Ready for deployment on **UAVs & ground robots**  
+- 📍 **Prediction results** can be logged and visualized  
+- 🔒 Low **false positive rate** to enhance safety  
 
 ---
 
 ## 🏗️ System Architecture
-1. **Data Acquisition** → Collect raw sensor inputs (GPR / magnetometry)  
-2. **Preprocessing** → Noise filtering, normalization, augmentation  
-3. **Detection Model** → CNN classifier predicts mine presence/type  
-4. **Decision Module** → Confidence thresholds & false-alarm suppression  
-5. **Autonomous Integration** → ROS-based communication with UAVs/robots  
-6. **Visualization** → Real-time dashboard with alerts & maps  
+1. **Data Acquisition** → Collect raw GPR sensor inputs  
+2. **Preprocessing** → Flatten radargrams, normalization  
+3. **Detection Models** →  
+   - **RandomForest + PCA** → baseline ML pipeline, robust for small datasets  
+   - **LogisticRegression + PCA** → better generalization, high cross-validation accuracy  
+4. **Prediction API** → Flask server with `/predict` endpoint  
+5. **Integration** → Connect predictions to frontend or dashboard for visualization  
 
 ---
 
 ## ⚙️ Tech Stack
 - **Languages**: Python  
-- **Deep Learning**: PyTorch / TensorFlow  
-- **Robotics**: ROS (Robot Operating System)  
-- **Visualization**: GIS / mapping tools  
-- **Deployment**: Docker  
-- **Sensors**: GPR, magnetometry APIs  
+- **Machine Learning**: scikit-learn (RandomForest, LogisticRegression, PCA)  
+- **Backend**: Flask API  
+- **Deployment**: Local server / Postman testing  
+- **Visualization**: Optional React frontend or Jupyter notebooks  
 
 ---
-
 
 ## 📦 Installation
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/landmine-detection.git
-cd landmine-detection
-
+git clone https://github.com/your-username/Autonomous-Landmine-detector.git
+cd Autonomous-Landmine-detector
 ```
 
-### 2. Set up the Python environment:  
+### 2. Set up Python environment
+
 ```
 python -m venv env
 source env/bin/activate  # Linux/Mac
@@ -56,37 +55,76 @@ env\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-### 3. Connect sensor hardware or load sample datasets for simulated testing.
+# 🧪 Usage
 
-### 4. Run the detection pipeline:  
+
+### 1. Run Jupyter Notebooks
+
+Notebooks/ contains:
+
+-> landmine_detection.ipynb → dataset exploration & preprocessing
+
+-> MineClassifier.ipynb → model training, evaluation, PCA, and saving .pkl files
+
+### 2. Run Flask Server
+
 ```
-python run_detection.py --input sensor_data/
+cd app
+python app.py
 ```
 
----
+-> Server runs at http://127.0.0.1:5000
 
-## 🧪 Usage
+-> /predict endpoint accepts POST requests with JSON payload:
+```
+{
+  "features": [/* flattened radargram values (74800) */]
+}
+```
+### 3. Testing Predictions
 
-- Prepare sensor data from GPR or magnetometry equipment (real or simulated).  
-- Train the CNN detection model on labeled datasets using provided training scripts.  
-- Deploy the model to autonomous platforms integrated with ROS.  
-- Monitor real-time detection outputs and locations on the visualization dashboard.  
+-> Use Postman or curl to test:
+```
+curl -X POST http://127.0.0.1:5000/predict \
+-H "Content-Type: application/json" \
+-d @sample_input.json
+```
 
----
+-> Response:
+```
+{"prediction": 0}
+```
 
-## 📊 Results & Evaluation
+or
+```
+{"prediction": 1}
+```
+# 📊 Models
+```
+Model	Features	CV Accuracy	Notes
+RandomForest + PCA	30 PCA components	~89.5%	Baseline, stable
+LogisticRegression + PCA	30 PCA components	~93.8%	Best generalization, recommended
+```
+Models saved in models/ folder:
+```
+randomforest_pca_model.pkl
 
-- Achieved >90% detection accuracy on benchmark datasets  
-- False positive rate reduced by 30% compared to baseline models  
-- Real-time processing frame rate meets UAV operation requirements  
+logreg_pca_radar_model.pkl
+```
+# 📝 Reports
 
----
-## 📌 Future Enhancements
+-> Reports/ contains:
+```
+MineClassifier.pdf → notebook export with results & plots
 
-🌐 Integration with satellite imagery for large-scale mapping
+NotebookReports.pdf → additional visualizations
+```
+# 📌 Future Enhancements
 
-🧠 Exploring transformer-based models for improved accuracy
+🌐 Integration with UAV & robot hardware for autonomous deployment
 
-🔋 Power optimization for long-duration UAV missions
+🧠 Explore CNN-based detection for improved accuracy with larger datasets
 
+📍 Real-time geospatial mapping & visualization
 
+⚡ Optimizations for speed and low-latency predictions
