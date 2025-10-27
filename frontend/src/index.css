@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Tactical Dark Theme - Military Command Center Aesthetic */
+    --background: 220 25% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Electric blue for tactical UI elements */
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 210 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Bright red for mine detection alerts */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Bright green for clear/safe status */
+    --success: 120 100% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Amber for warnings */
+    --warning: 45 100% 55%;
+    --warning-foreground: 0 0% 10%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 20%;
+    --ring: 210 100% 55%;
+
+    --radius: 0.375rem;
+
+    /* Gradient backgrounds for tech feel */
+    --gradient-tactical: linear-gradient(135deg, hsl(220, 25%, 10%) 0%, hsl(220, 20%, 8%) 100%);
+    --gradient-alert: linear-gradient(135deg, hsl(0, 100%, 50%) 0%, hsl(0, 80%, 40%) 100%);
+    --gradient-safe: linear-gradient(135deg, hsl(120, 100%, 45%) 0%, hsl(120, 80%, 35%) 100%);
+    
+    /* Glow effects for alerts */
+    --glow-danger: 0 0 20px hsla(0, 100%, 50%, 0.6);
+    --glow-success: 0 0 20px hsla(120, 100%, 45%, 0.4);
+    --glow-primary: 0 0 15px hsla(210, 100%, 55%, 0.4);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    background: var(--gradient-tactical);
+  }
+}
+
+@layer utilities {
+  .pulse-danger {
+    animation: pulse-danger 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-danger {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: var(--glow-danger);
+    }
+    50% {
+      opacity: 0.7;
+      box-shadow: 0 0 30px hsla(0, 100%, 50%, 0.8);
+    }
+  }
+
+  .pulse-success {
+    animation: pulse-success 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-success {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: var(--glow-success);
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsla(210, 100%, 55%, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(210, 100%, 55%, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
