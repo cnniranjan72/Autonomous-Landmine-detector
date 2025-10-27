@@ -101,9 +101,10 @@ or
 ```
 # 📊 Models
 ```
-Model	Features	CV Accuracy	Notes
-RandomForest + PCA	30 PCA components	~89.5%	Baseline, stable
-LogisticRegression + PCA	30 PCA components	~93.8%	Best generalization, recommended
+| Model                   | Features           | CV Accuracy | Notes                   |
+|-------------------------|--------------------|-------------|-------------------------|
+| RandomForest + PCA      | 30 PCA components  | ~89.5%      | Baseline, stable         |
+| LogisticRegression + PCA| 30 PCA components  | ~93.8%      | Best generalization, recommended |
 ```
 Models saved in models/ folder:
 ```
