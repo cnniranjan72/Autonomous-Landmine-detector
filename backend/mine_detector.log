@@ -1,0 +1,12 @@
+2025-10-30 22:43:28,150 - WARNING -  * Debugger is active!
+2025-10-30 22:43:28,152 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 22:44:01,871 - INFO - Input: [0.9, 0.75, 0.8, 0.7, 0.6, 0.1, 0.2, 0.3] \u2192 {'prediction': 1, 'probability': 0.5245000000000001, 'message': 'Mine detected!'}
+2025-10-30 22:44:01,873 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:01] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 22:44:10,640 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:10] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2025-10-30 22:44:10,777 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:10] "GET /apidocs/ HTTP/1.1" 200 -
+2025-10-30 22:44:10,963 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:10] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-10-30 22:44:11,013 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-10-30 22:44:11,125 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-10-30 22:44:11,316 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-10-30 22:44:11,416 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-10-30 22:44:11,457 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -

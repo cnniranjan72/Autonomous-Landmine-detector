@@ -1,5 +1,7 @@
-Flask
+flask
 flask-cors
+flasgger
 numpy
 scikit-learn
 joblib
+imbalanced-learn
