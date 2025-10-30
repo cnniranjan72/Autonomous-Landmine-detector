@@ -10,3 +10,152 @@
 2025-10-30 22:44:11,316 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
 2025-10-30 22:44:11,416 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /apispec_1.json HTTP/1.1" 200 -
 2025-10-30 22:44:11,457 - INFO - 127.0.0.1 - - [30/Oct/2025 22:44:11] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2025-10-30 22:57:53,693 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 22:57:56,823 - WARNING -  * Debugger is active!
+2025-10-30 22:57:56,826 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:08:50,763 - INFO - 127.0.0.1 - - [30/Oct/2025 23:08:50] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:08:50,769 - INFO - 127.0.0.1 - - [30/Oct/2025 23:08:50] "[31m[1mPOST /api/predict/mine HTTP/1.1[0m" 400 -
+2025-10-30 23:12:40,043 - INFO - 127.0.0.1 - - [30/Oct/2025 23:12:40] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:12:40,046 - ERROR - Error during prediction: 'list' object has no attribute 'get'
+2025-10-30 23:12:40,047 - INFO - 127.0.0.1 - - [30/Oct/2025 23:12:40] "[35m[1mPOST /api/predict/mine HTTP/1.1[0m" 500 -
+2025-10-30 23:17:57,707 - INFO - 127.0.0.1 - - [30/Oct/2025 23:17:57] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:17:57,710 - ERROR - Error during prediction: 'list' object has no attribute 'get'
+2025-10-30 23:17:57,711 - INFO - 127.0.0.1 - - [30/Oct/2025 23:17:57] "[35m[1mPOST /api/predict/mine HTTP/1.1[0m" 500 -
+2025-10-30 23:18:11,055 - INFO - 127.0.0.1 - - [30/Oct/2025 23:18:11] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:18:11,058 - ERROR - Error during prediction: 'list' object has no attribute 'get'
+2025-10-30 23:18:11,058 - INFO - 127.0.0.1 - - [30/Oct/2025 23:18:11] "[35m[1mPOST /api/predict/mine HTTP/1.1[0m" 500 -
+2025-10-30 23:18:51,475 - INFO - Input: [0.9, 0.75, 0.8, 0.7, 0.6, 0.1, 0.2, 0.3] \u2192 {'prediction': 1, 'probability': 0.5245000000000001, 'message': 'Mine detected!'}
+2025-10-30 23:18:51,476 - INFO - 127.0.0.1 - - [30/Oct/2025 23:18:51] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:19:09,267 - INFO - 127.0.0.1 - - [30/Oct/2025 23:19:09] "GET / HTTP/1.1" 200 -
+2025-10-30 23:20:14,244 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:20:17,373 - WARNING -  * Debugger is active!
+2025-10-30 23:20:17,377 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:20:46,333 - INFO - 127.0.0.1 - - [30/Oct/2025 23:20:46] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:20:46,338 - ERROR - Error during prediction: 'list' object has no attribute 'get'
+2025-10-30 23:20:46,339 - INFO - 127.0.0.1 - - [30/Oct/2025 23:20:46] "[35m[1mPOST /api/predict/mine HTTP/1.1[0m" 500 -
+2025-10-30 23:21:28,572 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:21:30,660 - WARNING -  * Debugger is active!
+2025-10-30 23:21:30,663 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:22:00,652 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:22:03,144 - WARNING -  * Debugger is active!
+2025-10-30 23:22:03,147 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:22:43,608 - INFO - 127.0.0.1 - - [30/Oct/2025 23:22:43] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:23:16,765 - INFO - 127.0.0.1 - - [30/Oct/2025 23:23:16] "GET / HTTP/1.1" 200 -
+2025-10-30 23:24:44,685 - INFO - 127.0.0.1 - - [30/Oct/2025 23:24:44] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:25:26,464 - INFO - 127.0.0.1 - - [30/Oct/2025 23:25:26] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:27:44,628 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:27:48,278 - WARNING -  * Debugger is active!
+2025-10-30 23:27:48,281 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:27:55,791 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes.py', reloading
+2025-10-30 23:27:58,075 - INFO - \u2705 Model loaded successfully.
+2025-10-30 23:27:58,091 - WARNING -  * Debugger is active!
+2025-10-30 23:27:58,093 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:30:45,249 - INFO - 127.0.0.1 - - [30/Oct/2025 23:30:45] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:31:00,844 - INFO - 127.0.0.1 - - [30/Oct/2025 23:31:00] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:32:03,941 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:32:07,026 - INFO - \u2705 Model loaded successfully.
+2025-10-30 23:32:07,042 - WARNING -  * Debugger is active!
+2025-10-30 23:32:07,045 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:32:57,794 - INFO - 127.0.0.1 - - [30/Oct/2025 23:32:57] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:32:57,910 - INFO - Input: [0.9, 0.8, 0.75, 0.6, 0.5, 0.3, 0.2, 0.1] \u2192 {'prediction': 0, 'probability': 0.4378333333333334, 'message': 'No mine detected.'}
+2025-10-30 23:32:57,911 - INFO - 127.0.0.1 - - [30/Oct/2025 23:32:57] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:33:59,853 - INFO - 127.0.0.1 - - [30/Oct/2025 23:33:59] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:33:59,928 - INFO - Input: [0.9, 0.75, 0.8, 0.7, 0.5, 0.1, 0.2, 0.3] \u2192 {'prediction': 1, 'probability': 0.5245000000000001, 'message': 'Mine detected!'}
+2025-10-30 23:33:59,928 - INFO - 127.0.0.1 - - [30/Oct/2025 23:33:59] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:35:30,222 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:35:32,737 - INFO - \u2705 Model loaded successfully.
+2025-10-30 23:35:32,751 - WARNING -  * Debugger is active!
+2025-10-30 23:35:32,755 - INFO -  * Debugger PIN: 910-399-392
+2025-10-30 23:47:12,751 - INFO - 127.0.0.1 - - [30/Oct/2025 23:47:12] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:47:12,855 - INFO - Input: [0.9, 0.75, 0.8, 0.6, 0.2, 0.3, 0.4, 0.1] \u2192 {'prediction': 0, 'probability': 0.4228333333333334, 'message': 'No mine detected.'}
+2025-10-30 23:47:12,856 - INFO - 127.0.0.1 - - [30/Oct/2025 23:47:12] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:47:31,227 - INFO - 127.0.0.1 - - [30/Oct/2025 23:47:31] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:47:31,295 - INFO - Input: [0.9, 0.75, 0.8, 0.6, 0.2, 0.3, 0.4, 0.1] \u2192 {'prediction': 0, 'probability': 0.4228333333333334, 'message': 'No mine detected.'}
+2025-10-30 23:47:31,296 - INFO - 127.0.0.1 - - [30/Oct/2025 23:47:31] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-10-30 23:50:13,994 - INFO - 127.0.0.1 - - [30/Oct/2025 23:50:13] "[33mOPTIONS /login HTTP/1.1[0m" 404 -
+2025-10-30 23:57:02,058 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-30 23:57:05,765 - INFO - \u2705 Model loaded successfully.
+2025-10-31 00:07:08,100 - ERROR - Failed to load model: [Errno 2] No such file or directory: 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\models\\mine_detector_pipeline.pkl'
+2025-10-31 00:07:10,045 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.202:5000
+2025-10-31 00:07:10,046 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 00:07:10,047 - INFO -  * Restarting with stat
+2025-10-31 00:07:10,769 - ERROR - Failed to load model: [Errno 2] No such file or directory: 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\models\\mine_detector_pipeline.pkl'
+2025-10-31 00:07:11,026 - WARNING -  * Debugger is active!
+2025-10-31 00:07:11,031 - INFO -  * Debugger PIN: 910-399-392
+2025-10-31 00:07:22,343 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:22] "GET /apidocs/ HTTP/1.1" 200 -
+2025-10-31 00:07:22,502 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:22] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-10-31 00:07:22,554 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:22] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-10-31 00:07:22,657 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:22] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-10-31 00:07:22,869 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:22] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-10-31 00:07:23,346 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:23] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-10-31 00:07:23,360 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:23] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-10-31 00:07:29,373 - INFO - 127.0.0.1 - - [31/Oct/2025 00:07:29] "GET / HTTP/1.1" 200 -
+2025-10-31 00:09:34,592 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\auth_routes.py', reloading
+2025-10-31 00:09:34,732 - INFO -  * Restarting with stat
+2025-10-31 00:09:35,648 - ERROR - Failed to load model: [Errno 2] No such file or directory: 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\models\\mine_detector_pipeline.pkl'
+2025-10-31 00:09:36,583 - WARNING -  * Debugger is active!
+2025-10-31 00:09:36,586 - INFO -  * Debugger PIN: 910-399-392
+2025-10-31 00:09:45,490 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\predict_routes.py', reloading
+2025-10-31 00:09:45,681 - INFO -  * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:53] "GET /apidocs/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:53] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:53] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:53] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:53] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:54] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:09:54] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:11:46] "[35m[1mPOST /api/auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "GET /apidocs/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:13:59] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:14:05] "[35m[1mPOST /api/auth/register HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:14:27] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:14:38] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-31 00:16:24,828 - INFO -  * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:29] "GET /apidocs/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:29] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:29] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:29] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:29] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:29] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:30] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:16:50] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:17:22] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 422 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\auth_routes.py', reloading
+2025-10-31 00:19:38,170 - INFO -  * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392
+INFO:werkzeug: * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\auth_routes.py', reloading
+2025-10-31 00:21:05,370 - INFO -  * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "GET /apidocs/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:15] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:21:33] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2025 00:22:10] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-10-31 00:30:34,282 - INFO -  * Restarting with stat
+2025-10-31 00:32:18,769 - INFO -  * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392
+INFO:werkzeug: * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\models\\user_model.py', reloading
+2025-10-31 00:32:28,257 - INFO -  * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392

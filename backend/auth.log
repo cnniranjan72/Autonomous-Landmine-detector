@@ -1,0 +1,3 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 910-399-392
+INFO:werkzeug: * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading

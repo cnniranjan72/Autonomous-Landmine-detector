@@ -5,3 +5,6 @@ numpy
 scikit-learn
 joblib
 imbalanced-learn
+Flask-SQLAlchemy
+Flask-JWT-Extended
+Werkzeug
