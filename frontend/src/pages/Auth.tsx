@@ -7,6 +7,7 @@ import { Navbar } from "@/components/Navbar";
 import { Shield, Mail, Lock, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import api from "@/lib/api";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -19,27 +20,39 @@ const Auth = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate auth
-    setTimeout(() => {
+    try {
+      const endpoint = isLogin ? "/login" : "/register";
+      const res = await api.post(endpoint, { email, password });
+
+      if (isLogin) {
+        localStorage.setItem("token", res.data.access_token);
+        toast.success("Login successful!", {
+          description: "Redirecting to dashboard...",
+        });
+      } else {
+        toast.success("Registration successful!", {
+          description: "You can now log in.",
+        });
+        setIsLogin(true);
+        setIsLoading(false);
+        return;
+      }
+
+      setTimeout(() => navigate("/dashboard"), 1000);
+    } catch (err: any) {
+      const msg =
+        err.response?.data?.message || "Authentication failed. Try again.";
+      toast.error(msg);
+    } finally {
       setIsLoading(false);
-      toast.success(isLogin ? "Login successful!" : "Registration successful!", {
-        description: "Redirecting to dashboard...",
-      });
-      setTimeout(() => {
-        navigate("/dashboard");
-      }, 1000);
-    }, 1500);
+    }
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
       <div className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background" />
-
-        <Card className="w-full max-w-md relative z-10 border-2 border-primary/30 bg-card/90 backdrop-blur-sm p-8">
+        <Card className="w-full max-w-md border-2 border-primary/30 bg-card/90 backdrop-blur-sm p-8">
           <div className="text-center mb-8">
             <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
               <Shield className="h-8 w-8 text-primary" />
@@ -56,9 +69,7 @@ const Auth = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-semibold uppercase tracking-wide">
-                Email Address
-              </Label>
+              <Label htmlFor="email">Email Address</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -74,9 +85,7 @@ const Auth = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-sm font-semibold uppercase tracking-wide">
-                Password
-              </Label>
+              <Label htmlFor="password">Password</Label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -93,7 +102,7 @@ const Auth = () => {
 
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 glow-primary"
+              className="w-full bg-primary hover:bg-primary/90"
               disabled={isLoading}
             >
               {isLoading ? "PROCESSING..." : isLogin ? "LOGIN" : "REGISTER"}

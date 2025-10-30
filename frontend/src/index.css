@@ -116,3 +116,11 @@ All colors MUST be HSL.
     background-size: 50px 50px;
   }
 }
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}

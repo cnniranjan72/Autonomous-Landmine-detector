@@ -15,7 +15,7 @@ export const SafetyMetrics = () => {
             <div className="flex items-center justify-center mb-2">
               <Target className="h-5 w-5 text-primary" />
             </div>
-            <div className="text-3xl font-bold font-mono text-primary">93.8%</div>
+            <div className="text-3xl font-bold font-mono text-primary">98%</div>
             <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">
               CV Accuracy
             </div>
