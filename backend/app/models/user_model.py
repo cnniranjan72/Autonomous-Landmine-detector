@@ -4,7 +4,8 @@ from datetime import datetime
 
 def create_user(username, email, password):
     users = mongo.db.users
-    if users.find_one({"$or": [{"username": username}, {"email": email}]}):
+    existing_user = users.find_one({"$or": [{"username": username}, {"email": email}]})
+    if existing_user:
         return None  # duplicate
 
     password_hash = generate_password_hash(password)

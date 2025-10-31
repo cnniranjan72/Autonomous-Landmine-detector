@@ -41,7 +41,7 @@ const Dashboard = () => {
       setIsLoading(true);
       setPrediction(null);
 
-      const response = await api.post("/api/predict/mine", { input: dataArray });
+      const response = await api.post("/predict/mine", { input: dataArray });
       const data = response.data;
       if (data.error) throw new Error(data.error);
 

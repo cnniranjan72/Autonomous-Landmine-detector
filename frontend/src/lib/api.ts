@@ -1,17 +1,20 @@
 import axios from "axios";
 
-// Flask backend base URL
 export const API_URL =
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/api";
 
-// Axios instance
-
+// Create axios instance
 const api = axios.create({
-  baseURL: "http://127.0.0.1:5000",
+  baseURL: API_URL,
 });
-// Log all requests for debugging
+
+// Add JWT token automatically
 api.interceptors.request.use((config) => {
-  console.log(`[API] ${config.method?.toUpperCase()} ${config.url}`);
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  console.log(`[API] ${config.method?.toUpperCase()} ${config.baseURL}${config.url}`);
   return config;
 });
 

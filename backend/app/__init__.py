@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
 from flasgger import Swagger
 from flask_jwt_extended import JWTManager
 from flask_pymongo import PyMongo
 
 mongo = PyMongo()
+jwt = JWTManager()
 
 def create_app():
     app = Flask(__name__)
@@ -16,28 +17,32 @@ def create_app():
 
     # --- Init ---
     mongo.init_app(app)
-    jwt = JWTManager(app)
+    jwt.init_app(app)
 
-    # --- CORS ---
+    # --- ✅ Enable CORS globally (for frontend connection) ---
     CORS(
-        app,
-        resources={r"/*": {"origins": ["http://localhost:*", "http://127.0.0.1:*"]}},
-        supports_credentials=True
-    )
+    app,
+    resources={r"/*": {"origins": "*"}},
+    supports_credentials=True,
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "OPTIONS"]
+)
+
 
     # --- Import Blueprints ---
     from app.routes.auth_routes import auth_bp
     from app.routes.predict_routes import bp as predict_bp
 
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(predict_bp)
+    # ✅ Use consistent prefixes
+    app.register_blueprint(auth_bp, url_prefix="/api/auth")
+    app.register_blueprint(predict_bp, url_prefix="/api")
 
-    # --- Swagger setup with JWT ---
+    # --- Swagger setup ---
     template = {
         "swagger": "2.0",
         "info": {
             "title": "Autonomous Landmine Detector API",
-            "description": "API with MongoDB + JWT Authentication",
+            "description": "API using MongoDB + JWT Authentication + ML Prediction",
             "version": "1.0"
         },
         "securityDefinitions": {
@@ -53,9 +58,10 @@ def create_app():
 
     Swagger(app, template=template)
 
+    # --- Simple home route ---
     @app.route("/")
     def home():
-        return {"message": "Mine Detection API (MongoDB) is running!"}
+        return jsonify({"message": "Mine Detection API (MongoDB + JWT) is running!"})
 
     return app
 

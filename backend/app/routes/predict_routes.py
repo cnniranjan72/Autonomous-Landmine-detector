@@ -1,68 +1,65 @@
 from flask import Blueprint, request, jsonify
-from flask_jwt_extended import jwt_required
 import joblib, numpy as np, os, logging
 
 bp = Blueprint("predict_bp", __name__)
 
-logging.basicConfig(filename="mine_detector.log", level=logging.INFO)
+# Logging setup
+logging.basicConfig(
+    filename="mine_detector.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
+# Model path (go one level up from routes/)
 BASE = os.path.dirname(os.path.abspath(__file__))
 PIPE_PATH = os.path.join(BASE, "..", "models", "mine_detector_pipeline.pkl")
 
+# Load model
 try:
     pipeline = joblib.load(PIPE_PATH)
+    logging.info("✅ Model loaded successfully.")
 except Exception as e:
     pipeline = None
-    logging.error(f"Failed to load model: {e}")
+    logging.error(f"❌ Failed to load model: {e}")
 
+# Feature order
 FEATURES = [
     'Metal_Level', 'Magnetic_Field', 'Ground_Density', 'Thermal_Signature',
     'Metal_Mag_Ratio', 'Metal_Diff', 'Metal_Mag_Energy', 'Metal_Mag_Avg'
 ]
 
-@bp.route("/api/predict/mine", methods=["POST"])
-@jwt_required()
+
+@bp.route("/predict/mine", methods=["POST"])  # ✅ Correct route
 def predict_mine():
     """
-    Predict landmine presence using sensor data
-    ---
-    tags:
-      - Prediction
-    security:
-      - Bearer: []
-    parameters:
-      - name: body
-        in: body
-        required: true
-        schema:
-          type: object
-          properties:
-            input:
-              type: array
-              items:
-                type: number
-              example: [10, 0.5, 30, 12, 1.1, 0.8, 0.9, 0.7]
-    responses:
-      200:
-        description: Prediction result
+    Predict whether a mine is present based on sensor inputs.
     """
     try:
         if pipeline is None:
-            return jsonify({"error": "Model not loaded."}), 500
+            return jsonify({"error": "Model not loaded on server."}), 500
 
         data = request.get_json(force=True)
         arr = data.get("input")
 
         if not arr or len(arr) != len(FEATURES):
-            return jsonify({"error": "Invalid input format"}), 400
+            return jsonify({
+                "error": f"Expected {len(FEATURES)} numeric values in order: {FEATURES}"
+            }), 400
 
-        sample = np.array(arr).reshape(1, -1)
+        # Convert input and predict
+        sample = np.array(arr, dtype=float).reshape(1, -1)
         pred = int(pipeline.predict(sample)[0])
         proba = float(pipeline.predict_proba(sample)[0, 1])
 
-        result = {"prediction": pred, "probability": proba}
+        result = {
+            "prediction": pred,
+            "probability": round(proba, 3),
+            "message": "⚠️ Mine detected!" if pred == 1 else "✅ No mine detected."
+        }
+
         logging.info(f"Input: {arr} → {result}")
-        return jsonify(result)
+        return jsonify(result), 200
+
     except Exception as e:
-        logging.error(f"Prediction error: {e}")
+        logging.error(f"Error during prediction: {e}")
         return jsonify({"error": str(e)}), 500

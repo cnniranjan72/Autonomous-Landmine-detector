@@ -21,7 +21,7 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const endpoint = isLogin ? "/login" : "/register";
+      const endpoint = isLogin ? "/api/auth/login" : "/api/auth/register";
       const res = await api.post(endpoint, { email, password });
 
       if (isLogin) {

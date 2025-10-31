@@ -8,3 +8,5 @@ imbalanced-learn
 Flask-SQLAlchemy
 Flask-JWT-Extended
 Werkzeug
+gunicorn
+pymongo

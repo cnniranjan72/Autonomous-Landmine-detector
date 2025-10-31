@@ -10,9 +10,9 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# Model path (relative to app/)
+# Model path (relative to app root)
 BASE = os.path.dirname(os.path.abspath(__file__))
-PIPE_PATH = os.path.join(BASE, "models", "mine_detector_pipeline.pkl")
+PIPE_PATH = os.path.join(BASE, "..", "models", "mine_detector_pipeline.pkl")
 
 # Try loading model
 try:
@@ -28,8 +28,7 @@ FEATURES = [
     'Metal_Mag_Ratio', 'Metal_Diff', 'Metal_Mag_Energy', 'Metal_Mag_Avg'
 ]
 
-
-@bp.route("/api/predict/mine", methods=["POST"])
+@bp.route("/predict/mine", methods=["POST"])  # ✅ Removed extra /api
 def predict_mine():
     """
     Predict whether a mine is present based on sensor inputs.
@@ -66,13 +65,14 @@ def predict_mine():
                 "error": f"Input must be a list of {len(FEATURES)} numeric values in order: {FEATURES}"
             }), 400
 
-        sample = np.array(arr).reshape(1, -1)
+        # Convert input to NumPy array and predict
+        sample = np.array(arr, dtype=float).reshape(1, -1)
         pred = int(pipeline.predict(sample)[0])
         proba = float(pipeline.predict_proba(sample)[0, 1])
 
         result = {
             "prediction": pred,
-            "probability": proba,
+            "probability": round(proba, 3),
             "message": "Mine detected!" if pred == 1 else "No mine detected."
         }
 

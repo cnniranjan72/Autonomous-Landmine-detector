@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: mine-detector-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        value: supersecretkey
+      - key: JWT_SECRET_KEY
+        value: jwtsecretkey
+      - key: MONGO_URI
+        value: mongodb+srv://<user>:<pass>@cluster.mongodb.net/mine_detector
