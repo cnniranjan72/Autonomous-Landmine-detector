@@ -1,9 +1,10 @@
+import os
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flasgger import Swagger
 from flask_jwt_extended import JWTManager
 from flask_pymongo import PyMongo
-
+from os import getenv
 mongo = PyMongo()
 jwt = JWTManager()
 
@@ -13,7 +14,7 @@ def create_app():
     # --- Config ---
     app.config["SECRET_KEY"] = "supersecretkey"
     app.config["JWT_SECRET_KEY"] = "jwtsecretkey"
-    app.config["MONGO_URI"] = "mongodb://localhost:27017/mine_detector"
+    app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/mine_detector_db")
 
     # --- Init ---
     mongo.init_app(app)
