@@ -9,4 +9,5 @@ Flask-SQLAlchemy
 Flask-JWT-Extended
 Werkzeug
 gunicorn
-pymongo
+flask-pymongo
+
