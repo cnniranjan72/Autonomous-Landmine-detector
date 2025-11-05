@@ -450,3 +450,22 @@ INFO:werkzeug: * Restarting with stat
 2025-11-05 07:30:05,870 - INFO - 127.0.0.1 - - [05/Nov/2025 07:30:05] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
 2025-11-05 07:30:20,156 - INFO - 127.0.0.1 - - [05/Nov/2025 07:30:20] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
 2025-11-05 07:36:32,517 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-11-05 07:36:33,297 - INFO -  * Restarting with stat
+2025-11-05 07:36:39,909 - INFO - \u2705 Model loaded successfully.
+2025-11-05 07:36:39,950 - WARNING -  * Debugger is active!
+2025-11-05 07:36:39,961 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 07:36:43,457 - INFO - 127.0.0.1 - - [05/Nov/2025 07:36:43] "OPTIONS /api/auth/register HTTP/1.1" 200 -
+2025-11-05 07:36:44,271 - INFO - 127.0.0.1 - - [05/Nov/2025 07:36:44] "[35m[1mPOST /api/auth/register HTTP/1.1[0m" 201 -
+2025-11-05 07:36:50,414 - INFO - 127.0.0.1 - - [05/Nov/2025 07:36:50] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+2025-11-05 07:36:50,750 - INFO - 127.0.0.1 - - [05/Nov/2025 07:36:50] "POST /api/auth/login HTTP/1.1" 200 -
+2025-11-05 07:37:04,062 - INFO - 127.0.0.1 - - [05/Nov/2025 07:37:04] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 07:37:04,381 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-05 07:37:04,382 - INFO - 127.0.0.1 - - [05/Nov/2025 07:37:04] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 07:47:39,468 - INFO - 127.0.0.1 - - [05/Nov/2025 07:47:39] "GET / HTTP/1.1" 200 -
+2025-11-05 07:48:55,774 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\main.py', reloading
+2025-11-05 07:48:56,548 - INFO -  * Restarting with stat
+2025-11-05 07:49:16,665 - INFO - \u2705 Model loaded successfully.
+2025-11-05 07:49:16,704 - WARNING -  * Debugger is active!
+2025-11-05 07:49:16,711 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 07:54:00,655 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\main.py', reloading
+2025-11-05 07:54:00,995 - INFO -  * Restarting with stat
