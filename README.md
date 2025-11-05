@@ -213,7 +213,6 @@ or
 ```
 {"prediction": 1}  // Mine detected
 ```
-
 ## 🌐 Deployment URLs
 
 Frontend → https://intellimine.vercel.app
