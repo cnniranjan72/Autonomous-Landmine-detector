@@ -415,3 +415,38 @@ INFO:werkzeug: * Restarting with stat
 2025-11-01 00:06:29,566 - INFO - 127.0.0.1 - - [01/Nov/2025 00:06:29] "[31m[1mPOST /api/auth/register HTTP/1.1[0m" 400 -
 2025-11-01 00:08:49,481 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\auth_routes.py', reloading
 INFO:werkzeug: * Restarting with stat
+2025-11-05 06:57:04,679 - INFO - \u2705 Model loaded successfully.
+2025-11-05 06:57:06,073 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.196:5000
+2025-11-05 06:57:06,073 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-05 06:57:06,076 - INFO -  * Restarting with stat
+2025-11-05 06:57:13,325 - INFO - \u2705 Model loaded successfully.
+2025-11-05 06:57:13,374 - WARNING -  * Debugger is active!
+2025-11-05 06:57:13,388 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 06:58:38,051 - INFO - 127.0.0.1 - - [05/Nov/2025 06:58:38] "[33mGET /api/auth/profile HTTP/1.1[0m" 404 -
+2025-11-05 06:58:38,305 - INFO - 127.0.0.1 - - [05/Nov/2025 06:58:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-05 06:58:45,235 - INFO - 127.0.0.1 - - [05/Nov/2025 06:58:45] "GET / HTTP/1.1" 200 -
+2025-11-05 07:23:08,868 - INFO - 127.0.0.1 - - [05/Nov/2025 07:23:08] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
+2025-11-05 07:25:52,285 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-11-05 07:25:53,027 - INFO -  * Restarting with stat
+2025-11-05 07:26:00,285 - INFO - \u2705 Model loaded successfully.
+2025-11-05 07:26:00,351 - WARNING -  * Debugger is active!
+2025-11-05 07:26:00,361 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 07:26:41,743 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-11-05 07:26:42,453 - INFO -  * Restarting with stat
+2025-11-05 07:26:48,549 - INFO - \u2705 Model loaded successfully.
+2025-11-05 07:26:48,576 - WARNING -  * Debugger is active!
+2025-11-05 07:26:48,583 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 07:27:01,534 - INFO - 127.0.0.1 - - [05/Nov/2025 07:27:01] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
+2025-11-05 07:27:55,963 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading
+2025-11-05 07:27:56,704 - INFO -  * Restarting with stat
+2025-11-05 07:28:03,263 - INFO - \u2705 Model loaded successfully.
+2025-11-05 07:28:03,315 - WARNING -  * Debugger is active!
+2025-11-05 07:28:03,324 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 07:28:40,512 - INFO - 127.0.0.1 - - [05/Nov/2025 07:28:40] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
+2025-11-05 07:30:04,684 - INFO - 127.0.0.1 - - [05/Nov/2025 07:30:04] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
+2025-11-05 07:30:05,870 - INFO - 127.0.0.1 - - [05/Nov/2025 07:30:05] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
+2025-11-05 07:30:20,156 - INFO - 127.0.0.1 - - [05/Nov/2025 07:30:20] "[33mOPTIONS /api/register HTTP/1.1[0m" 404 -
+2025-11-05 07:36:32,517 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\__init__.py', reloading

@@ -41,7 +41,12 @@ const Dashboard = () => {
       setIsLoading(true);
       setPrediction(null);
 
-      const response = await api.post("/predict/mine", { input: dataArray });
+      // ✅ FIXED Predict Call (matches backend)
+const response = await api.post("/predict/mine", {
+  input: Object.values(inputValues).map((v) => parseFloat(v))
+});
+
+
       const data = response.data;
       if (data.error) throw new Error(data.error);
 
@@ -59,16 +64,16 @@ const Dashboard = () => {
           lng: Math.random() * 180,
           prediction: pred,
           confidence: Number(conf),
-          model: "ML Model v1",
+          model: "Random Forest + PCA",
         };
 
         setLogEntries((prev) => [newEntry, ...prev]);
         toast.success(`Prediction: ${pred.toUpperCase()} (${conf}%)`);
         setIsLoading(false);
-      }, 2500); // small delay for animation
+      }, 2500);
     } catch (err: any) {
       console.error("Prediction error:", err);
-      toast.error("Prediction failed. Ensure Flask backend is running on port 5000.");
+      toast.error("Prediction failed. Check backend logs or input data.");
       setIsLoading(false);
     }
   };
@@ -88,10 +93,9 @@ const Dashboard = () => {
         </div>
       </header>
 
-      <StatusBar isConnected={true} selectedModel="Custom ML Model" />
+      <StatusBar isConnected={true} selectedModel="Random Forest + PCA Model" />
 
       <main className="container mx-auto px-6 py-8 space-y-10">
-        {/* Prediction & Input Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <PredictionCard
             prediction={prediction}
@@ -100,7 +104,9 @@ const Dashboard = () => {
           />
 
           <div className="p-6 border border-primary/30 rounded-2xl bg-gray-900/60 shadow-xl backdrop-blur-sm">
-            <h2 className="font-semibold text-xl mb-4 text-primary">Input Sensor Data</h2>
+            <h2 className="font-semibold text-xl mb-4 text-primary">
+              Input Sensor Data
+            </h2>
 
             <div className="grid grid-cols-2 gap-3">
               {Object.keys(inputValues).map((key) => (
@@ -128,7 +134,6 @@ const Dashboard = () => {
               {isLoading ? "Scanning Environment..." : "Run Prediction"}
             </Button>
 
-            {/* Scanner Animation */}
             {isLoading && (
               <div className="flex justify-center items-center mt-6">
                 <motion.div
@@ -147,7 +152,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Logs + Metrics Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <PredictionLog entries={logEntries} />
           <SafetyMetrics />

@@ -1,7 +1,11 @@
 import axios from "axios";
 
-export const API_URL =
-  import.meta.env.VITE_API_URL || "https://intellimine.onrender.com/api";
+// ✅ Automatically switch between local and production
+const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+export const API_URL = isLocalhost
+  ? "http://127.0.0.1:5000/api"
+  : "https://intellimine.onrender.com/api";
 
 const api = axios.create({
   baseURL: API_URL,

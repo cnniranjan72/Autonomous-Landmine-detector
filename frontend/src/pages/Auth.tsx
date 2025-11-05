@@ -4,13 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Navbar } from "@/components/Navbar";
-import { Shield, Mail, Lock, ArrowLeft } from "lucide-react";
+import { Shield, Mail, Lock, User, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import api from "@/lib/api";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -21,27 +22,31 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      const endpoint = isLogin ? "/api/auth/login" : "/api/auth/register";
-      const res = await api.post(endpoint, { email, password });
+      // ✅ Correct endpoints
+      const endpoint = isLogin ? "/auth/login" : "/auth/register";
+      const payload = isLogin
+        ? { email, password }
+        : { username, email, password };
+
+      const res = await api.post(endpoint, payload);
 
       if (isLogin) {
-        localStorage.setItem("token", res.data.access_token);
+        localStorage.setItem("token", res.data.token);
         toast.success("Login successful!", {
           description: "Redirecting to dashboard...",
         });
+        setTimeout(() => navigate("/dashboard"), 1000);
       } else {
         toast.success("Registration successful!", {
           description: "You can now log in.",
         });
         setIsLogin(true);
-        setIsLoading(false);
-        return;
       }
-
-      setTimeout(() => navigate("/dashboard"), 1000);
     } catch (err: any) {
       const msg =
-        err.response?.data?.message || "Authentication failed. Try again.";
+        err.response?.data?.error ||
+        err.response?.data?.message ||
+        "Authentication failed. Please try again.";
       toast.error(msg);
     } finally {
       setIsLoading(false);
@@ -52,22 +57,40 @@ const Auth = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <Card className="w-full max-w-md border-2 border-primary/30 bg-card/90 backdrop-blur-sm p-8">
+        <Card className="w-full max-w-md border-2 border-primary/30 bg-card/90 backdrop-blur-sm p-8 shadow-xl">
           <div className="text-center mb-8">
             <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
               <Shield className="h-8 w-8 text-primary" />
             </div>
-            <h1 className="text-3xl font-bold mb-2">
+            <h1 className="text-3xl font-bold mb-2 tracking-wide">
               {isLogin ? "SYSTEM LOGIN" : "REGISTER ACCOUNT"}
             </h1>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               {isLogin
-                ? "Access the autonomous detection system"
-                : "Create your operator account"}
+                ? "Access the autonomous detection system securely"
+                : "Create your authorized operator account"}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {!isLogin && (
+              <div className="space-y-2">
+                <Label htmlFor="username">Username</Label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Input
+                    id="username"
+                    type="text"
+                    placeholder="john_doe"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="pl-10"
+                    required
+                  />
+                </div>
+              </div>
+            )}
+
             <div className="space-y-2">
               <Label htmlFor="email">Email Address</Label>
               <div className="relative">
@@ -102,10 +125,14 @@ const Auth = () => {
 
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90"
+              className="w-full bg-primary hover:bg-primary/90 transition-all duration-200"
               disabled={isLoading}
             >
-              {isLoading ? "PROCESSING..." : isLogin ? "LOGIN" : "REGISTER"}
+              {isLoading
+                ? "PROCESSING..."
+                : isLogin
+                ? "LOGIN"
+                : "REGISTER"}
             </Button>
           </form>
 
@@ -114,14 +141,16 @@ const Auth = () => {
               onClick={() => setIsLogin(!isLogin)}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              {isLogin ? "Need an account? Register here" : "Already have an account? Login here"}
+              {isLogin
+                ? "Need an account? Register here"
+                : "Already have an account? Login here"}
             </button>
           </div>
 
           <div className="mt-6 pt-6 border-t border-border">
             <Button
               variant="outline"
-              className="w-full border-primary/30"
+              className="w-full border-primary/30 hover:bg-primary/10"
               onClick={() => navigate("/")}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
