@@ -472,3 +472,9 @@ INFO:werkzeug: * Restarting with stat
 2025-11-05 07:54:03,239 - INFO - \u2705 Model loaded successfully.
 2025-11-05 07:54:03,250 - WARNING -  * Debugger is active!
 2025-11-05 07:54:03,252 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 08:00:56,241 - INFO - 127.0.0.1 - - [05/Nov/2025 08:00:56] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 08:00:56,354 - INFO - Input: [2, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-05 08:00:56,354 - INFO - 127.0.0.1 - - [05/Nov/2025 08:00:56] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 08:01:16,863 - INFO - 127.0.0.1 - - [05/Nov/2025 08:01:16] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 08:01:16,935 - INFO - Input: [2, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-05 08:01:16,936 - INFO - 127.0.0.1 - - [05/Nov/2025 08:01:16] "POST /api/predict/mine HTTP/1.1" 200 -
