@@ -1,0 +1,43 @@
+{
+  "dataset": "mine_detection_dataset.csv",
+  "n_samples": 2000,
+  "train_samples": 1500,
+  "test_samples": 500,
+  "rf": {
+    "n_estimators": 200,
+    "max_depth": 12
+  },
+  "metrics": {
+    "raw": {
+      "brier": 0.035326136554766414,
+      "auc": 0.9952364777432712,
+      "logloss": 0.13204866175146965
+    },
+    "calibrated": {
+      "brier": 0.024560606060606057,
+      "auc": 0.9959481754658385,
+      "logloss": 0.07443292445426866
+    },
+    "improvement": {
+      "brier_delta": 0.010765530494160357
+    }
+  },
+  "reliability_curve": {
+    "fraction_of_pos": [
+      0.0,
+      0.125,
+      0.22727272727272727,
+      0.5833333333333334,
+      0.75,
+      1.0
+    ],
+    "mean_predicted_value": [
+      0.0,
+      0.125,
+      0.22727272727272724,
+      0.5833333333333333,
+      0.75,
+      1.0
+    ]
+  }
+}

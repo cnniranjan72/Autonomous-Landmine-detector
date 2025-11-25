@@ -6,9 +6,19 @@ interface PredictionCardProps {
   prediction: "mine" | "clear" | null;
   confidence: number;
   isActive: boolean;
+  severityScore?: number | null;    // 0..1
+  severityLevel?: string | null;    // LOW/MODERATE/HIGH/CRITICAL
+  severityColor?: string | null;    // hex color
 }
 
-export const PredictionCard = ({ prediction, confidence, isActive }: PredictionCardProps) => {
+export const PredictionCard = ({
+  prediction,
+  confidence,
+  isActive,
+  severityScore = null,
+  severityLevel = null,
+  severityColor = null,
+}: PredictionCardProps) => {
   const isMineDetected = prediction === "mine";
 
   return (
@@ -35,7 +45,24 @@ export const PredictionCard = ({ prediction, confidence, isActive }: PredictionC
           )}
         </div>
 
-        <div className="flex items-center justify-center py-8">
+        {/* Compact Threat Level Card at top-right of detection card */}
+        {severityLevel && severityScore !== null && (
+          <div className="mb-4 flex items-center justify-center">
+            <div className="w-full max-w-xs p-3 rounded-lg border border-border bg-black/40 flex items-center justify-between">
+              <div>
+                <div className="text-xs text-muted-foreground">Threat</div>
+                <div className="font-semibold">{severityLevel}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-sm text-muted-foreground">Severity</div>
+                <div className="font-mono font-bold text-lg">{(severityScore * 100).toFixed(0)}%</div>
+              </div>
+              <div style={{ width: 10, height: 40, background: severityColor ?? "#999", borderRadius: 4, marginLeft: 8 }} />
+            </div>
+          </div>
+        )}
+
+        <div className="flex items-center justify-center py-6">
           {isMineDetected ? (
             <div className="text-center">
               <Skull className="h-20 w-20 text-destructive mx-auto mb-4 animate-pulse" />
@@ -84,6 +111,7 @@ export const PredictionCard = ({ prediction, confidence, isActive }: PredictionC
                 {confidence.toFixed(1)}%
               </span>
             </div>
+
             <div className="mt-2 h-2 bg-secondary rounded-full overflow-hidden">
               <div
                 className={cn(
@@ -93,6 +121,22 @@ export const PredictionCard = ({ prediction, confidence, isActive }: PredictionC
                 style={{ width: `${confidence}%` }}
               />
             </div>
+
+            {/* Severity bar under confidence */}
+            {severityScore !== null && (
+              <div className="mt-4">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs text-muted-foreground uppercase">Threat Severity</span>
+                  <span className="text-xs font-mono">{(severityScore * 100).toFixed(0)}%</span>
+                </div>
+                <div className="w-full h-3 bg-border rounded overflow-hidden">
+                  <div style={{ width: `${(severityScore * 100).toFixed(0)}%`, background: severityColor ?? "#999" }} className="h-full transition-all" />
+                </div>
+                <div className="mt-2 text-xs text-muted-foreground">
+                  {severityLevel} — {severityScore !== null ? `${(severityScore * 100).toFixed(0)}%` : ""}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>

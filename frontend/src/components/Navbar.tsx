@@ -16,19 +16,12 @@ export const Navbar = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             <Shield className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg hidden sm:inline">LANDMINE DETECTION</span>
+            <span className="font-bold text-lg hidden sm:inline">INTELLIMINE-LANDMINE DETECTION</span>
           </button>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-6">
-            <button
-              onClick={() => navigate("/")}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/" ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              HOME
-            </button>
+           
             <button
               onClick={() => {
                 if (location.pathname === "/") {
@@ -50,8 +43,19 @@ export const Navbar = () => {
                 location.pathname === "/dashboard" ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              DASHBOARD
+              MINE PREDICTOR
             </button>
+            <button
+              onClick={() => navigate("/mine-type")}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname === "/mine-type" ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              MINE CLASSIFIER
+            </button>
+            <Button variant="ghost" onClick={() => navigate("/safe-path")}> SAFE PATH </Button>
+            <Button variant="ghost" onClick={() => navigate("/mission-dashboard")}> MISSION DASHBOARD </Button>
+            <Button variant="ghost" onClick={() => navigate("/mine-field-simulation")}> MINEFIELD SIMULATION </Button>
           </div>
 
           {/* Auth Buttons */}

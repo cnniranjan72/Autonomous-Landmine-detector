@@ -478,3 +478,348 @@ INFO:werkzeug: * Restarting with stat
 2025-11-05 08:01:16,863 - INFO - 127.0.0.1 - - [05/Nov/2025 08:01:16] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
 2025-11-05 08:01:16,935 - INFO - Input: [2, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
 2025-11-05 08:01:16,936 - INFO - 127.0.0.1 - - [05/Nov/2025 08:01:16] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 11:44:57,735 - INFO - \u2705 Model loaded successfully.
+2025-11-05 11:44:57,790 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.151.176:5000
+2025-11-05 11:44:57,790 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-05 11:44:57,793 - INFO -  * Restarting with stat
+2025-11-05 11:45:03,990 - INFO - \u2705 Model loaded successfully.
+2025-11-05 11:45:04,014 - WARNING -  * Debugger is active!
+2025-11-05 11:45:04,020 - INFO -  * Debugger PIN: 910-399-392
+2025-11-05 11:45:18,898 - INFO - 127.0.0.1 - - [05/Nov/2025 11:45:18] "GET / HTTP/1.1" 200 -
+2025-11-05 11:45:19,153 - INFO - 127.0.0.1 - - [05/Nov/2025 11:45:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-05 11:45:50,386 - INFO - 127.0.0.1 - - [05/Nov/2025 11:45:50] "OPTIONS /api/auth/register HTTP/1.1" 200 -
+2025-11-05 11:45:51,329 - INFO - 127.0.0.1 - - [05/Nov/2025 11:45:51] "[35m[1mPOST /api/auth/register HTTP/1.1[0m" 201 -
+2025-11-05 11:45:54,629 - INFO - 127.0.0.1 - - [05/Nov/2025 11:45:54] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+2025-11-05 11:45:54,955 - INFO - 127.0.0.1 - - [05/Nov/2025 11:45:54] "POST /api/auth/login HTTP/1.1" 200 -
+2025-11-05 11:46:20,049 - INFO - 127.0.0.1 - - [05/Nov/2025 11:46:20] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-05 11:46:20,235 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-05 11:46:20,236 - INFO - 127.0.0.1 - - [05/Nov/2025 11:46:20] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-24 21:48:44,649 - INFO - \u2705 Model loaded successfully.
+2025-11-24 21:48:46,099 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.196:5000
+2025-11-24 21:48:46,099 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-24 21:48:46,106 - INFO -  * Restarting with stat
+2025-11-24 21:48:52,962 - INFO - \u2705 Model loaded successfully.
+2025-11-24 21:48:53,040 - WARNING -  * Debugger is active!
+2025-11-24 21:48:53,058 - INFO -  * Debugger PIN: 910-399-392
+2025-11-24 21:49:41,393 - INFO - 127.0.0.1 - - [24/Nov/2025 21:49:41] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+2025-11-24 21:49:41,811 - INFO - 127.0.0.1 - - [24/Nov/2025 21:49:41] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+2025-11-24 21:50:12,156 - INFO - 127.0.0.1 - - [24/Nov/2025 21:50:12] "OPTIONS /api/auth/register HTTP/1.1" 200 -
+2025-11-24 21:50:12,188 - INFO - 127.0.0.1 - - [24/Nov/2025 21:50:12] "[31m[1mPOST /api/auth/register HTTP/1.1[0m" 400 -
+2025-11-24 21:50:34,339 - INFO - 127.0.0.1 - - [24/Nov/2025 21:50:34] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+2025-11-24 21:50:34,663 - INFO - 127.0.0.1 - - [24/Nov/2025 21:50:34] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+2025-11-24 21:50:53,943 - INFO - 127.0.0.1 - - [24/Nov/2025 21:50:53] "OPTIONS /api/auth/register HTTP/1.1" 200 -
+2025-11-24 21:50:53,974 - INFO - 127.0.0.1 - - [24/Nov/2025 21:50:53] "[31m[1mPOST /api/auth/register HTTP/1.1[0m" 400 -
+2025-11-24 21:51:03,722 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:03] "OPTIONS /api/auth/register HTTP/1.1" 200 -
+2025-11-24 21:51:04,092 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:04] "[35m[1mPOST /api/auth/register HTTP/1.1[0m" 201 -
+2025-11-24 21:51:07,615 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:07] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+2025-11-24 21:51:07,928 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:07] "POST /api/auth/login HTTP/1.1" 200 -
+2025-11-24 21:51:18,557 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:18] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-24 21:51:18,709 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-24 21:51:18,710 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:18] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-24 21:51:46,436 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:46] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-24 21:51:46,581 - INFO - Input: [0, 0, 0, 0, 0, 0, 0, 0] \u2192 {'prediction': 0, 'probability': 0.002, 'message': '\u2705 No mine detected.'}
+2025-11-24 21:51:46,583 - INFO - 127.0.0.1 - - [24/Nov/2025 21:51:46] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 14:23:09,469 - INFO - \u2705 Model loaded successfully.
+2025-11-25 14:23:09,535 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.148.243:5000
+2025-11-25 14:23:09,535 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-25 14:23:09,538 - INFO -  * Restarting with stat
+2025-11-25 14:26:15,744 - INFO - \u2705 Model loaded successfully.
+2025-11-25 14:26:17,228 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.47.51.134:5000
+2025-11-25 14:26:17,229 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-25 14:26:17,234 - INFO -  * Restarting with stat
+2025-11-25 14:26:38,389 - INFO - \u2705 Model loaded successfully.
+2025-11-25 14:26:38,450 - WARNING -  * Debugger is active!
+2025-11-25 14:26:38,473 - INFO -  * Debugger PIN: 910-399-392
+2025-11-25 14:26:38,891 - INFO - 127.0.0.1 - - [25/Nov/2025 14:26:38] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 14:26:39,063 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-25 14:26:39,066 - INFO - 127.0.0.1 - - [25/Nov/2025 14:26:39] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 20:00:41,641 - INFO - \u2705 Model loaded successfully.
+2025-11-25 20:00:41,818 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 20:00:43,217 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.196:5000
+2025-11-25 20:00:43,217 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-25 20:00:43,223 - INFO -  * Restarting with stat
+2025-11-25 20:00:48,192 - INFO - \u2705 Model loaded successfully.
+2025-11-25 20:00:48,414 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 20:00:48,490 - WARNING -  * Debugger is active!
+2025-11-25 20:00:48,534 - INFO -  * Debugger PIN: 910-399-392
+2025-11-25 20:01:21,403 - INFO - 127.0.0.1 - - [25/Nov/2025 20:01:21] "[33mPOST /predict/mine HTTP/1.1[0m" 404 -
+2025-11-25 20:01:37,890 - INFO - 127.0.0.1 - - [25/Nov/2025 20:01:37] "[33mPOST /predict HTTP/1.1[0m" 404 -
+2025-11-25 20:01:40,646 - INFO - 127.0.0.1 - - [25/Nov/2025 20:01:40] "[33mPOST /predict HTTP/1.1[0m" 404 -
+2025-11-25 20:04:48,725 - INFO - 127.0.0.1 - - [25/Nov/2025 20:04:48] "GET / HTTP/1.1" 200 -
+2025-11-25 20:04:48,902 - INFO - 127.0.0.1 - - [25/Nov/2025 20:04:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-25 20:06:52,211 - INFO - Input: [0.45, 0.32, 0.67, 0.58, 0.41, 0.29, 0.55, 0.48] \u2192 {'prediction': 0, 'probability': 0.341, 'message': '\u2705 No mine detected.'}
+2025-11-25 20:06:52,213 - INFO - 127.0.0.1 - - [25/Nov/2025 20:06:52] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 20:07:08,782 - INFO - 127.0.0.1 - - [25/Nov/2025 20:07:08] "[33mPOST /api/predict/mine-type%0A HTTP/1.1[0m" 404 -
+2025-11-25 20:07:17,582 - INFO - 127.0.0.1 - - [25/Nov/2025 20:07:17] "[33mPOST /api/predict/mine-type%0A HTTP/1.1[0m" 404 -
+2025-11-25 20:07:40,304 - INFO - 127.0.0.1 - - [25/Nov/2025 20:07:40] "[33mPOST /api/predict/mine-type%0A HTTP/1.1[0m" 404 -
+2025-11-25 20:10:10,340 - INFO - \u2705 Model loaded successfully.
+2025-11-25 20:10:10,739 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 20:10:12,086 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.196:5000
+2025-11-25 20:10:12,086 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-25 20:10:12,090 - INFO -  * Restarting with stat
+2025-11-25 20:10:20,219 - INFO - \u2705 Model loaded successfully.
+2025-11-25 20:10:20,536 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 20:10:20,598 - WARNING -  * Debugger is active!
+2025-11-25 20:10:20,618 - INFO -  * Debugger PIN: 910-399-392
+2025-11-25 20:10:21,171 - INFO - Tabular input: {'V': 0.35, 'H': 0.55, 'S': 3} \u2192 {'mine_type': 5, 'label': 'M14 AP', 'confidence': 0.488}
+2025-11-25 20:10:21,174 - INFO - 127.0.0.1 - - [25/Nov/2025 20:10:21] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 20:12:28,979 - INFO - Tabular input: {'V': 0.35, 'H': 0.55, 'S': 2} \u2192 {'mine_type': 5, 'label': 'M14 AP', 'confidence': 0.445}
+2025-11-25 20:12:28,980 - INFO - 127.0.0.1 - - [25/Nov/2025 20:12:28] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 20:12:38,921 - INFO - Tabular input: {'V': 0.35, 'H': 0.1, 'S': 2} \u2192 {'mine_type': 3, 'label': 'Anti-Personnel', 'confidence': 0.539}
+2025-11-25 20:12:38,922 - INFO - 127.0.0.1 - - [25/Nov/2025 20:12:38] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 20:28:14,700 - INFO - 127.0.0.1 - - [25/Nov/2025 20:28:14] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 20:28:14,764 - INFO - Tabular input: {'V': 0.35, 'H': 0.1, 'S': 0} \u2192 {'mine_type': 3, 'label': 'Anti-Personnel', 'confidence': 0.652}
+2025-11-25 20:28:14,765 - INFO - 127.0.0.1 - - [25/Nov/2025 20:28:14] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:12:15,993 - INFO - 127.0.0.1 - - [25/Nov/2025 21:12:15] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:12:16,073 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955}
+2025-11-25 21:12:16,076 - INFO - 127.0.0.1 - - [25/Nov/2025 21:12:16] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:12:44,806 - INFO - 127.0.0.1 - - [25/Nov/2025 21:12:44] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:12:44,871 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955}
+2025-11-25 21:12:44,872 - INFO - 127.0.0.1 - - [25/Nov/2025 21:12:44] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:21:01,914 - INFO - 127.0.0.1 - - [25/Nov/2025 21:21:01] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 21:21:02,046 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-25 21:21:02,047 - INFO - 127.0.0.1 - - [25/Nov/2025 21:21:02] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 21:21:39,806 - INFO - 127.0.0.1 - - [25/Nov/2025 21:21:39] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 21:21:39,966 - INFO - Input: [0, 0, 0, 0, 0, 0, 0, 0] \u2192 {'prediction': 0, 'probability': 0.002, 'message': '\u2705 No mine detected.'}
+2025-11-25 21:21:39,968 - INFO - 127.0.0.1 - - [25/Nov/2025 21:21:39] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 21:22:50,003 - INFO - 127.0.0.1 - - [25/Nov/2025 21:22:50] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:22:50,075 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955}
+2025-11-25 21:22:50,076 - INFO - 127.0.0.1 - - [25/Nov/2025 21:22:50] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:26:54,587 - INFO - 127.0.0.1 - - [25/Nov/2025 21:26:54] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:26:54,693 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955}
+2025-11-25 21:26:54,695 - INFO - 127.0.0.1 - - [25/Nov/2025 21:26:54] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:35:43,012 - INFO - 127.0.0.1 - - [25/Nov/2025 21:35:43] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 21:35:43,167 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!'}
+2025-11-25 21:35:43,168 - INFO - 127.0.0.1 - - [25/Nov/2025 21:35:43] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 21:38:57,898 - INFO - 127.0.0.1 - - [25/Nov/2025 21:38:57] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 21:38:57,973 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955}
+2025-11-25 21:38:57,975 - INFO - 127.0.0.1 - - [25/Nov/2025 21:38:57] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:12:39,064 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\predict_routes.py', reloading
+2025-11-25 22:12:40,085 - INFO -  * Restarting with stat
+2025-11-25 22:13:19,604 - INFO - \u2705 Model loaded successfully.
+2025-11-25 22:13:19,891 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 22:13:19,988 - WARNING -  * Debugger is active!
+2025-11-25 22:13:20,006 - INFO -  * Debugger PIN: 910-399-392
+2025-11-25 22:13:20,334 - INFO - 127.0.0.1 - - [25/Nov/2025 22:13:20] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:13:20,591 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.914, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:13:20,594 - INFO - 127.0.0.1 - - [25/Nov/2025 22:13:20] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:15:02,633 - INFO - 127.0.0.1 - - [25/Nov/2025 22:15:02] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:15:02,700 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:15:02,701 - INFO - 127.0.0.1 - - [25/Nov/2025 22:15:02] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:17:38,495 - INFO - 127.0.0.1 - - [25/Nov/2025 22:17:38] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:17:38,643 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.914, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:17:38,645 - INFO - 127.0.0.1 - - [25/Nov/2025 22:17:38] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:19:34,938 - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:34] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:19:35,024 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:19:35,026 - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:35] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:19:48,977 - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:48] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:19:49,078 - INFO - Tabular input: {'V': 1, 'H': 0, 'S': 0} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.914, 'severity_score': 0.94, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:19:49,080 - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:49] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:19:56,718 - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:56] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:19:56,833 - INFO - Tabular input: {'V': 0, 'H': 0, 'S': 0} \u2192 {'mine_type': 1, 'label': 'Null', 'confidence': 0.636, 'severity_score': 0.475, 'severity_level': 'MODERATE', 'severity_color': '#f59e0b'}
+2025-11-25 22:19:56,835 - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:56] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:24:14,660 - INFO - 127.0.0.1 - - [25/Nov/2025 22:24:14] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:24:14,836 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 2] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.914, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:24:14,837 - INFO - 127.0.0.1 - - [25/Nov/2025 22:24:14] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:24:23,380 - INFO - 127.0.0.1 - - [25/Nov/2025 22:24:23] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:24:23,522 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 2] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.914, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:24:23,524 - INFO - 127.0.0.1 - - [25/Nov/2025 22:24:23] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:36:31,345 - INFO - 127.0.0.1 - - [25/Nov/2025 22:36:31] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:36:31,405 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:36:31,405 - INFO - 127.0.0.1 - - [25/Nov/2025 22:36:31] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:36:36,705 - INFO - 127.0.0.1 - - [25/Nov/2025 22:36:36] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:36:36,762 - INFO - Tabular input: {'V': 11, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:36:36,763 - INFO - 127.0.0.1 - - [25/Nov/2025 22:36:36] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:36:42,192 - INFO - 127.0.0.1 - - [25/Nov/2025 22:36:42] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:36:42,272 - INFO - Tabular input: {'V': 0, 'H': 1, 'S': 1} \u2192 {'mine_type': 1, 'label': 'Null', 'confidence': 0.705, 'severity_score': 0.523, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:36:42,273 - INFO - 127.0.0.1 - - [25/Nov/2025 22:36:42] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:37:01,622 - INFO - 127.0.0.1 - - [25/Nov/2025 22:37:01] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:37:01,684 - INFO - Tabular input: {'V': 0.3, 'H': 1, 'S': 1} \u2192 {'mine_type': 3, 'label': 'Anti-Personnel', 'confidence': 0.553, 'severity_score': 0.627, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:37:01,684 - INFO - 127.0.0.1 - - [25/Nov/2025 22:37:01] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:37:06,846 - INFO - 127.0.0.1 - - [25/Nov/2025 22:37:06] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:37:06,913 - INFO - Tabular input: {'V': 0.3, 'H': 2, 'S': 1} \u2192 {'mine_type': 3, 'label': 'Anti-Personnel', 'confidence': 0.388, 'severity_score': 0.512, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:37:06,914 - INFO - 127.0.0.1 - - [25/Nov/2025 22:37:06] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:46:05,179 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:05] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:46:05,348 - INFO - Input: [1, 1, 1, 1, 1, 0, 1, 1] \u2192 {'prediction': 1, 'probability': 0.974, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.922, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:46:05,349 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:05] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 22:46:42,805 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:42] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:46:42,961 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:46:42,963 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:42] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:46:53,935 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:53] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:46:54,051 - INFO - Tabular input: {'V': 0, 'H': 1, 'S': 1} \u2192 {'mine_type': 1, 'label': 'Null', 'confidence': 0.705, 'severity_score': 0.523, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:46:54,056 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:54] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:46:59,239 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:59] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:46:59,313 - INFO - Tabular input: {'V': 0.5, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.829, 'severity_score': 0.88, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 22:46:59,315 - INFO - 127.0.0.1 - - [25/Nov/2025 22:46:59] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:47:05,759 - INFO - 127.0.0.1 - - [25/Nov/2025 22:47:05] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:47:05,970 - INFO - Tabular input: {'V': 0.5, 'H': 0.5, 'S': 0} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.611, 'severity_score': 0.727, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:47:05,972 - INFO - 127.0.0.1 - - [25/Nov/2025 22:47:05] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:47:11,529 - INFO - 127.0.0.1 - - [25/Nov/2025 22:47:11] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:47:11,603 - INFO - Tabular input: {'V': 0.5, 'H': 0.5, 'S': 0} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.611, 'severity_score': 0.727, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:47:11,605 - INFO - 127.0.0.1 - - [25/Nov/2025 22:47:11] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:47:23,877 - INFO - 127.0.0.1 - - [25/Nov/2025 22:47:23] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 22:47:23,965 - INFO - Tabular input: {'V': 0.5, 'H': 0.5, 'S': 0} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.611, 'severity_score': 0.727, 'severity_level': 'HIGH', 'severity_color': '#f97316'}
+2025-11-25 22:47:23,967 - INFO - 127.0.0.1 - - [25/Nov/2025 22:47:23] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 23:25:03,871 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\predict_routes.py', reloading
+2025-11-25 23:25:04,968 - INFO -  * Restarting with stat
+2025-11-25 23:25:14,501 - INFO - \u2705 Model loaded successfully.
+2025-11-25 23:25:14,729 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 23:25:14,795 - WARNING -  * Debugger is active!
+2025-11-25 23:25:14,811 - INFO -  * Debugger PIN: 910-399-392
+2025-11-25 23:28:22,152 - ERROR - Path generation error: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-11-25 23:28:22,155 - INFO - 127.0.0.1 - - [25/Nov/2025 23:28:22] "[35m[1mPOST /api/path/generate HTTP/1.1[0m" 500 -
+2025-11-25 23:29:28,286 - ERROR - Path generation error: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-11-25 23:29:28,287 - INFO - 127.0.0.1 - - [25/Nov/2025 23:29:28] "[35m[1mPOST /api/path/generate HTTP/1.1[0m" 500 -
+2025-11-25 23:30:21,449 - INFO - 127.0.0.1 - - [25/Nov/2025 23:30:21] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:30:21,456 - ERROR - Path generation error: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-11-25 23:30:21,457 - INFO - 127.0.0.1 - - [25/Nov/2025 23:30:21] "[35m[1mPOST /api/path/generate HTTP/1.1[0m" 500 -
+2025-11-25 23:30:38,815 - INFO - 127.0.0.1 - - [25/Nov/2025 23:30:38] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:30:38,822 - ERROR - Path generation error: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-11-25 23:30:38,823 - INFO - 127.0.0.1 - - [25/Nov/2025 23:30:38] "[35m[1mPOST /api/path/generate HTTP/1.1[0m" 500 -
+2025-11-25 23:31:35,283 - INFO - Generated path start=(0, 0) goal=(29, 24) mines=2 path_len=31
+2025-11-25 23:31:35,284 - INFO - 127.0.0.1 - - [25/Nov/2025 23:31:35] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:38:48,971 - INFO - 127.0.0.1 - - [25/Nov/2025 23:38:48] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:38:48,983 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=26
+2025-11-25 23:38:48,985 - INFO - 127.0.0.1 - - [25/Nov/2025 23:38:48] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:39:06,039 - INFO - 127.0.0.1 - - [25/Nov/2025 23:39:06] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:39:06,050 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=26
+2025-11-25 23:39:06,052 - INFO - 127.0.0.1 - - [25/Nov/2025 23:39:06] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:39:12,643 - INFO - 127.0.0.1 - - [25/Nov/2025 23:39:12] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:39:12,654 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=29
+2025-11-25 23:39:12,656 - INFO - 127.0.0.1 - - [25/Nov/2025 23:39:12] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:40:25,140 - INFO - 127.0.0.1 - - [25/Nov/2025 23:40:25] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 23:40:25,267 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.914, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 23:40:25,268 - INFO - 127.0.0.1 - - [25/Nov/2025 23:40:25] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-25 23:40:31,319 - INFO - 127.0.0.1 - - [25/Nov/2025 23:40:31] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 23:40:31,397 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-25 23:40:31,398 - INFO - 127.0.0.1 - - [25/Nov/2025 23:40:31] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-25 23:53:02,710 - INFO - 127.0.0.1 - - [25/Nov/2025 23:53:02] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:53:02,719 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=28
+2025-11-25 23:53:02,721 - INFO - 127.0.0.1 - - [25/Nov/2025 23:53:02] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:56:20,814 - INFO - 127.0.0.1 - - [25/Nov/2025 23:56:20] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:56:20,827 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=9 path_len=32
+2025-11-25 23:56:20,830 - INFO - 127.0.0.1 - - [25/Nov/2025 23:56:20] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:56:33,387 - INFO - 127.0.0.1 - - [25/Nov/2025 23:56:33] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:56:33,394 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=12 path_len=31
+2025-11-25 23:56:33,396 - INFO - 127.0.0.1 - - [25/Nov/2025 23:56:33] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:56:44,548 - INFO - 127.0.0.1 - - [25/Nov/2025 23:56:44] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:56:44,557 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=13 path_len=31
+2025-11-25 23:56:44,559 - INFO - 127.0.0.1 - - [25/Nov/2025 23:56:44] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:57:01,489 - INFO - 127.0.0.1 - - [25/Nov/2025 23:57:01] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:57:01,501 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=26
+2025-11-25 23:57:01,503 - INFO - 127.0.0.1 - - [25/Nov/2025 23:57:01] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-25 23:59:19,893 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\predict_routes.py', reloading
+2025-11-25 23:59:20,393 - INFO -  * Restarting with stat
+2025-11-25 23:59:28,089 - INFO - \u2705 Pipeline model loaded successfully.
+2025-11-25 23:59:28,089 - INFO - \u2139\ufe0f No calibration model found (calibrated probabilities disabled).
+2025-11-25 23:59:28,286 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-25 23:59:28,332 - WARNING -  * Debugger is active!
+2025-11-25 23:59:28,348 - INFO -  * Debugger PIN: 910-399-392
+2025-11-26 00:01:05,384 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\models\\caliberation.py', reloading
+2025-11-26 00:01:06,124 - INFO -  * Restarting with stat
+2025-11-26 00:01:10,282 - INFO - \u2705 Pipeline model loaded successfully.
+2025-11-26 00:01:10,283 - INFO - \u2139\ufe0f No calibration model found (calibrated probabilities disabled).
+2025-11-26 00:01:10,358 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-26 00:01:10,387 - WARNING -  * Debugger is active!
+2025-11-26 00:01:10,396 - INFO -  * Debugger PIN: 910-399-392
+2025-11-26 00:04:43,099 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\models\\calibration.py', reloading
+2025-11-26 00:04:43,738 - INFO -  * Restarting with stat
+2025-11-26 00:04:47,996 - INFO - \u2705 Pipeline model loaded successfully.
+2025-11-26 00:04:47,997 - INFO - \u2139\ufe0f No calibration model found (calibrated probabilities disabled).
+2025-11-26 00:04:48,096 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-26 00:04:48,113 - WARNING -  * Debugger is active!
+2025-11-26 00:04:48,117 - INFO -  * Debugger PIN: 910-399-392
+2025-11-26 00:04:55,102 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\models\\calibration.py', reloading
+2025-11-26 00:04:55,704 - INFO -  * Restarting with stat
+2025-11-26 00:05:01,647 - INFO - \u2705 Pipeline model loaded successfully.
+2025-11-26 00:05:01,647 - INFO - \u2139\ufe0f No calibration model found (calibrated probabilities disabled).
+2025-11-26 00:05:01,759 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-26 00:05:01,799 - WARNING -  * Debugger is active!
+2025-11-26 00:05:01,814 - INFO -  * Debugger PIN: 910-399-392
+2025-11-26 00:06:23,113 - INFO - 127.0.0.1 - - [26/Nov/2025 00:06:23] "[31m[1mPOST /api/calibration/metrics HTTP/1.1[0m" 405 -
+2025-11-26 00:08:49,872 - INFO - 127.0.0.1 - - [26/Nov/2025 00:08:49] "[33mGET /api/calibration/metrics HTTP/1.1[0m" 404 -
+2025-11-26 00:10:15,770 - INFO - 127.0.0.1 - - [26/Nov/2025 00:10:15] "OPTIONS /api/calibration/metrics HTTP/1.1" 200 -
+2025-11-26 00:10:15,778 - INFO - 127.0.0.1 - - [26/Nov/2025 00:10:15] "[33mGET /api/calibration/metrics HTTP/1.1[0m" 404 -
+2025-11-26 00:18:32,264 - INFO - 127.0.0.1 - - [26/Nov/2025 00:18:32] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-26 00:18:32,443 - INFO - Input: [1, 1, 1, 1, 1, 1, 1, 1] \u2192 {'prediction': 1, 'raw_probability': 0.963, 'calibrated_probability': 0.963, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.914, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-26 00:18:32,450 - INFO - 127.0.0.1 - - [26/Nov/2025 00:18:32] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-26 00:18:39,735 - INFO - 127.0.0.1 - - [26/Nov/2025 00:18:39] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-26 00:18:39,804 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-26 00:18:39,805 - INFO - 127.0.0.1 - - [26/Nov/2025 00:18:39] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-26 00:18:46,698 - INFO - 127.0.0.1 - - [26/Nov/2025 00:18:46] "[33mOPTIONS /api/path/generate HTTP/1.1[0m" 404 -
+2025-11-26 00:18:50,924 - INFO - 127.0.0.1 - - [26/Nov/2025 00:18:50] "[33mOPTIONS /api/path/generate HTTP/1.1[0m" 404 -
+2025-11-26 00:19:05,817 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\routes\\predict_routes.py', reloading
+2025-11-26 00:19:06,911 - INFO -  * Restarting with stat
+2025-11-26 00:19:14,127 - INFO - \u2705 Model loaded successfully.
+2025-11-26 00:19:14,321 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-26 00:19:14,362 - WARNING -  * Debugger is active!
+2025-11-26 00:19:14,379 - INFO -  * Debugger PIN: 910-399-392
+2025-11-26 00:19:14,592 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:14] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:19:14,607 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=26
+2025-11-26 00:19:14,609 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:14] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:19:16,029 - INFO - Generated path start=(0, 0) goal=(25, 13) mines=4 path_len=29
+2025-11-26 00:19:16,030 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:16] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:19:39,504 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:39] "OPTIONS /api/predict/mine HTTP/1.1" 200 -
+2025-11-26 00:19:39,683 - INFO - Input: [1, 1, 1, 1, 1, 1, -1, 1] \u2192 {'prediction': 1, 'probability': 0.823, 'message': '\u26a0\ufe0f Mine detected!', 'severity_score': 0.816, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-26 00:19:39,685 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:39] "POST /api/predict/mine HTTP/1.1" 200 -
+2025-11-26 00:19:48,683 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:48] "OPTIONS /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-26 00:19:48,752 - INFO - Tabular input: {'V': 1, 'H': 1, 'S': 1} \u2192 {'mine_type': 2, 'label': 'Anti-Tank', 'confidence': 0.955, 'severity_score': 0.968, 'severity_level': 'CRITICAL', 'severity_color': '#ef4444'}
+2025-11-26 00:19:48,753 - INFO - 127.0.0.1 - - [26/Nov/2025 00:19:48] "POST /api/predict/mine-type HTTP/1.1" 200 -
+2025-11-26 00:20:02,665 - INFO - 127.0.0.1 - - [26/Nov/2025 00:20:02] "[33mOPTIONS /api/calibration/metrics HTTP/1.1[0m" 404 -
+2025-11-26 00:37:18,167 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:18] "[33mOPTIONS /api/detection/recent HTTP/1.1[0m" 404 -
+2025-11-26 00:37:18,171 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:18] "[33mOPTIONS /api/mission/summary HTTP/1.1[0m" 404 -
+2025-11-26 00:37:33,344 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:33] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:37:33,356 - INFO - Generated path start=(0, 0) goal=(29, 24) mines=6 path_len=33
+2025-11-26 00:37:33,357 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:33] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:37:42,774 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:42] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:37:42,785 - INFO - Generated path start=(0, 0) goal=(29, 24) mines=6 path_len=33
+2025-11-26 00:37:42,787 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:42] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:37:56,167 - INFO - 127.0.0.1 - - [26/Nov/2025 00:37:56] "[33mOPTIONS /api/mission/summary HTTP/1.1[0m" 404 -
+2025-11-26 00:38:14,767 - INFO - 127.0.0.1 - - [26/Nov/2025 00:38:14] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:38:14,778 - INFO - Generated path start=(0, 0) goal=(29, 24) mines=6 path_len=33
+2025-11-26 00:38:14,780 - INFO - 127.0.0.1 - - [26/Nov/2025 00:38:14] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:38:25,558 - INFO - 127.0.0.1 - - [26/Nov/2025 00:38:25] "[33mOPTIONS /api/mission/summary HTTP/1.1[0m" 404 -
+2025-11-26 00:38:29,935 - INFO - 127.0.0.1 - - [26/Nov/2025 00:38:29] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:38:29,946 - INFO - Generated path start=(0, 0) goal=(29, 24) mines=6 path_len=33
+2025-11-26 00:38:29,948 - INFO - 127.0.0.1 - - [26/Nov/2025 00:38:29] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:39:23,451 - INFO - 127.0.0.1 - - [26/Nov/2025 00:39:23] "[33mOPTIONS /api/detection/recent HTTP/1.1[0m" 404 -
+2025-11-26 00:39:23,456 - INFO - 127.0.0.1 - - [26/Nov/2025 00:39:23] "[33mOPTIONS /api/mission/summary HTTP/1.1[0m" 404 -
+2025-11-26 00:39:25,374 - INFO - 127.0.0.1 - - [26/Nov/2025 00:39:25] "OPTIONS /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:39:25,385 - INFO - Generated path start=(0, 0) goal=(29, 24) mines=6 path_len=33
+2025-11-26 00:39:25,387 - INFO - 127.0.0.1 - - [26/Nov/2025 00:39:25] "POST /api/path/generate HTTP/1.1" 200 -
+2025-11-26 00:55:33,540 - INFO - \u2705 Model loaded successfully.
+2025-11-26 00:55:33,609 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-26 00:55:34,936 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.196:5000
+2025-11-26 00:55:34,936 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-26 00:55:34,939 - INFO -  * Restarting with stat
+2025-11-26 00:55:39,249 - INFO - \u2705 Model loaded successfully.
+2025-11-26 00:55:39,329 - INFO - \u2705 Tabular model + scaler loaded successfully.
+2025-11-26 00:55:39,355 - WARNING -  * Debugger is active!
+2025-11-26 00:55:39,364 - INFO -  * Debugger PIN: 910-399-392
+2025-11-26 00:55:55,692 - INFO - 127.0.0.1 - - [26/Nov/2025 00:55:55] "[33mOPTIONS /api/detection/recent HTTP/1.1[0m" 404 -
+2025-11-26 00:55:55,741 - INFO - 127.0.0.1 - - [26/Nov/2025 00:55:55] "[33mOPTIONS /api/mission/summary HTTP/1.1[0m" 404 -
+2025-11-26 01:13:17,871 - INFO - 127.0.0.1 - - [26/Nov/2025 01:13:17] "[33mOPTIONS /api/detection/recent HTTP/1.1[0m" 404 -
+2025-11-26 01:13:17,875 - INFO - 127.0.0.1 - - [26/Nov/2025 01:13:17] "[33mOPTIONS /api/mission/summary HTTP/1.1[0m" 404 -
+2025-11-26 01:16:09,814 - INFO - 127.0.0.1 - - [26/Nov/2025 01:16:09] "[33mOPTIONS /api/calibration/metrics HTTP/1.1[0m" 404 -
+2025-11-26 01:17:05,004 - INFO -  * Detected change in 'C:\\Users\\cnnir\\Documents\\Mini-project\\Autonomous-Landmine-detector\\backend\\app\\models\\calibration.py', reloading

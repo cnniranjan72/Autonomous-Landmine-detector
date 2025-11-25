@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Activity, Wifi, WifiOff } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 

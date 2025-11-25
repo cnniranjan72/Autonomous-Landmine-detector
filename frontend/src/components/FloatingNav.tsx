@@ -52,7 +52,16 @@ export const FloatingNav = () => {
           className="rounded-full bg-primary hover:bg-primary/90"
         >
           <Activity className="h-4 w-4 mr-2" />
-          <span className="hidden sm:inline">Dashboard</span>
+          <span className="hidden sm:inline">Mine Detector</span>
+        </Button>
+        <div className="h-6 w-px bg-border" />
+        <Button
+          size="sm"
+          onClick={() => navigate("/mine-type")}
+          className="rounded-full bg-primary hover:bg-primary/90"
+        >
+          <Activity className="h-4 w-4 mr-2" />
+          <span className="hidden sm:inline">Mine Classifier</span>
         </Button>
       </div>
     </div>

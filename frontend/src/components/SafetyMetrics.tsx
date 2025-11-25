@@ -10,7 +10,6 @@ export const SafetyMetrics = () => {
       </div>
       <div className="p-6">
         <div className="grid grid-cols-3 gap-4">
-          {/* CV Accuracy */}
           <div className="text-center">
             <div className="flex items-center justify-center mb-2">
               <Target className="h-5 w-5 text-primary" />
@@ -21,7 +20,6 @@ export const SafetyMetrics = () => {
             </div>
           </div>
 
-          {/* False Positive Rate */}
           <div className="text-center">
             <div className="flex items-center justify-center mb-2">
               <TrendingUp className="h-5 w-5 text-success" />
@@ -32,7 +30,6 @@ export const SafetyMetrics = () => {
             </div>
           </div>
 
-          {/* Detection Rate */}
           <div className="text-center">
             <div className="flex items-center justify-center mb-2">
               <Shield className="h-5 w-5 text-success" />
