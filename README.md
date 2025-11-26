@@ -1,233 +1,325 @@
 # 🚀 IntelliMine – Autonomous Landmine Detection System
 
-## 🔍 Overview
-**IntelliMine** is an intelligent, full-stack **autonomous landmine detection system** powered by **machine learning**.  
-It predicts and classifies potential landmines using trained ML models and provides a **secure, user-friendly web interface** for monitoring and prediction.
-
-The system aims to improve **safety and accuracy** in demining operations through automation and AI.
+An advanced AI-powered landmine detection & classification system that brings together **Machine Learning**, **3D visualization**, **path planning**, **threat severity scoring**, and **interactive simulations** in a powerful full-stack application.
 
 ---
 
-## 🎯 Key Features
-- 🤖 **Machine Learning–based mine detection** (Logistic Regression + PCA)  
-- 🌍 Works on **varied terrain and soil conditions**  
-- ⚡ **Fast, real-time predictions** via Flask API  
-- 🔐 **JWT Authentication** (Register/Login users)  
-- 📊 **Interactive dashboard frontend** built with Vite + React  
-- ☁️ **Fully deployed** on Render (Backend) & Vercel (Frontend)  
-- 💾 **MongoDB integration** for user management and logging  
+# 🛰️ **Overview**
+
+**IntelliMine** is an intelligent, full-stack **autonomous landmine detection system** powered by multiple ML models.  
+It predicts, classifies, and visualizes landmine threats through a highly interactive dashboard with real-time animations and simulations.
+
+The system aims to improve **speed**, **accuracy**, and—most importantly—**safety** in real demining operations.
 
 ---
 
-## 🏗️ System Architecture
-1. **Frontend (React + Vite + TypeScript)**  
-   - User interface for authentication and mine prediction  
-   - Securely communicates with backend through REST API  
+# 🎯 Features
 
-2. **Backend (Flask API)**  
-   - Handles authentication, prediction, and logging  
-   - Uses pre-trained ML model for classification  
-
-3. **Database (MongoDB Atlas)**  
-   - Stores user credentials and logs  
-   - Connected via `flask-pymongo`
-
-4. **Deployment**  
-   - Backend: [Render](https://render.com)  
-   - Frontend: [Vercel](https://vercel.com)
+## 🔥 **Core Features**
+- 🤖 **Mine Detection Model (RF + PCA)**  
+- 🎯 **Mine-Type Classification Model (Random Forest / XGBoost)**  
+- ⚡ **Real-time threat severity scoring**  
+- 🧭 **Safe Path Generator (A* path planning)**  
+- 🌋 **Minefield Simulation Engine**  
+- 📊 **GPR Scan Analyzer (coming soon)**  
+- 🔐 **JWT Authentication**  
+- 📓 **Detection Logs, Metrics & History**  
+- 🎨 **Military-grade UX/UI with live animations**
 
 ---
 
-## ⚙️ Tech Stack
-| Layer | Tools / Frameworks |
-|-------|---------------------|
-| **Frontend** | React (Vite), TypeScript, Axios, TailwindCSS |
-| **Backend** | Flask, Flask-CORS, Flask-JWT-Extended, Flasgger |
-| **ML Model** | Scikit-learn (Logistic Regression + PCA) |
-| **Database** | MongoDB Atlas |
-| **Deployment** | Render (Backend), Vercel (Frontend) |
+# 🧠 Machine Learning Models
 
----
+## 1️⃣ **Mine Detection Model (Primary Model)**  
+**Purpose:** Detect whether a landmine is present based on 8 onboard sensor readings.  
+**Algorithm:** Random Forest + PCA dimensionality reduction  
+**Training Dataset:** `mine_detection_dataset.csv`
 
-## 📦 Installation
+### **Input Features**
+| Feature | Description |
+|--------|-------------|
+| Metal_Level | Strength of metal detection |
+| Magnetic_Field | Microtesla field strength |
+| Ground_Density | Soil density |
+| Thermal_Signature | Heat signature |
+| Metal_Mag_Ratio | Combined ratio |
+| Metal_Diff | Signal difference |
+| Metal_Mag_Energy | Combined energy |
+| Metal_Mag_Avg | Average metal–magnetic signal |
 
-### 🧩 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/Autonomous-Landmine-detector.git
-cd Autonomous-Landmine-detector
-```
-### ⚙️ 2. Backend Setup
-a. Install dependencies
-```
-pip install -r requirements.txt
-```
-b. Add environment variables (in Render or locally as .env):
-```
-JWT_SECRET_KEY=your_secret_key
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority
-```
-c. Run Flask server
-```
-python app.py
-```
+### **Output**
+- `"prediction": 0 | 1`
+- `"probability": 0.00 – 1.00"`
+- `"severity_score": 0 – 1"`
+- `"severity_level": LOW / MODERATE / HIGH / CRITICAL`
+- `"severity_color": hex`
 
-Server runs at:
-```
-👉 http://127.0.0.1:5000
-```
-### 💻 3. Frontend Setup
-a. Move to frontend folder
-```
-cd frontend
-```
-b. Install dependencies
-```
-npm install
-```
-c. Add environment variable (in .env)
-```
-VITE_API_URL=https://intellimine.onrender.com/api
-```
-d. Start frontend
-```
-npm run dev
-```
-
-Local frontend URL:
-```
-👉 http://localhost:5173
-```
-🔮 API Endpoints
-```
-Method	Endpoint	        Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	    Login and get JWT token
-POST	/api/predict/mine  	Predict if input data represents a mine (requires JWT)
-```
-## 🧠 Machine Learning Model Details
-
-### 🔹 Algorithm Used
-The model was trained using the **Random Forest Classifier**, a powerful ensemble learning algorithm that combines multiple decision trees to improve accuracy and reduce overfitting.
-
-**Why Random Forest?**
-- Performs well on **non-linear sensor data**.  
-- Handles **feature interactions** automatically.  
-- Provides **high interpretability** and **robustness to noise**.
-
----
-
-### 🔹 Dataset Description
-The dataset contained simulated or collected readings from various onboard sensors used in landmine detection systems.
-
-| Feature Name | Description |
-|---------------|-------------|
-| `Metal_Level` | Intensity of metal detected by sensor |
-| `Magnetic_Field` | Magnetic field strength (µT) |
-| `Ground_Density` | Soil or terrain density |
-| `Thermal_Signature` | Heat emission around target area |
-| `Metal_Mag_Ratio` | Ratio between metal and magnetic signals |
-| `Metal_Diff` | Difference in metal signal across regions |
-| `Metal_Mag_Energy` | Combined energy from metal + magnetic signals |
-| `Metal_Mag_Avg` | Average signal strength |
-
-**Target Variable:**  
-- `1` → Landmine Present  
-- `0` → No Landmine  
-
----
-
-### 🔹 Training Process
-1. **Data Preprocessing**
-   - Handled missing or inconsistent sensor readings.  
-   - Normalized all features for uniform scaling.  
-   - Split dataset into **80% training** and **20% testing**.
-
-2. **Model Training**
-   - Algorithm: `RandomForestClassifier(n_estimators=100, random_state=42)` (from scikit-learn).  
-   - Used **GridSearchCV** to optimize hyperparameters such as:
-     - `n_estimators` → number of trees  
-     - `max_depth` → maximum tree depth  
-     - `min_samples_split` → minimum samples to split a node  
-
-3. **Model Evaluation**
-   - Evaluation metrics: **Accuracy**, **Precision**, **Recall**, **F1-score**, and **ROC-AUC**.  
-   - Applied **5-fold Cross-Validation** to ensure generalization.
-
----
-
-### 🔹 Model Performance
-
+### **Model Performance**
 | Metric | Score |
 |--------|--------|
-| **Accuracy** | **96.8%** |
-| **Precision** | 95.2% |
-| **Recall** | 97.5% |
-| **F1 Score** | 96.3% |
-| **ROC-AUC** | 0.982 |
-
-✅ The model effectively distinguishes between landmine and non-landmine regions with very high confidence.
+| Accuracy | **96.8%** |
+| Precision | 95.2% |
+| Recall | 97.5% |
+| F1 Score | 96.3% |
+| ROC-AUC | 0.982 |
 
 ---
 
-### 🔹 Model Deployment
-- The trained pipeline (`mine_detector_pipeline.pkl`) includes both **feature preprocessing** and the **trained Random Forest model**.  
-- Loaded in the Flask backend for real-time predictions via the `/api/predict/mine` endpoint.  
+## 2️⃣ **Mine-Type Classification Model**
+**Purpose:** Identify which mine category is present using V, H, S GPR-derived features.  
+**Dataset:** `mine_dataset.csv`  
+**Model:** RandomForestClassifier / XGBoost
 
-**Example Input:**  
-```json
+### **Classes**
+| Class | Label |
+|-------|-------|
+| 1 | Null / No Mine |
+| 2 | Anti-Tank |
+| 3 | Anti-Personnel |
+| 4 | Booby-Trapped AP |
+| 5 | M14 AP |
+
+### **Outputs**
+- `"mine_type"` (1–5)
+- `"label"`
+- `"confidence"`
+- `"severity_score"`
+- `"severity_level"`
+- `"severity_color"`
+
+---
+
+## 3️⃣ **Threat Severity Engine (Custom Model)**
+A hybrid scoring formula combining:
+
+severity = 0.7 * model_probability + 0.3 * mine_weight
+
+Mine weights (danger factors):
+Null = 0.1
+Anti-Tank = 1.0
+Anti-Personnel = 0.8
+Booby-Trapped AP = 0.95
+M14 AP = 0.7
+
+Outputs include:
+
+✔ Severity Score  
+✔ Severity Color  
+✔ Severity Label  
+
+---
+
+# 🧭 **Safe Path Generator (A* Pathfinding)**
+
+### What it does:
+- Generates safe navigation path avoiding mines  
+- Uses mine severity to create danger cost heatmaps  
+- Animates robot movement cell-by-cell  
+- Allows custom mine placement, random generation, obstacles, start+goal selection  
+
+### Tech Behind It:
+- A* (Euclidean heuristic)
+- Dynamic grid cost weighting
+- Danger zone expansion (radius-based)
+- Smooth animations using React + Tailwind
+
+---
+
+# 🌋 **Minefield Simulation Engine**
+A fully interactive simulation panel:
+
+- Generate random minefields  
+- Adjust mine density  
+- Set contamination zones  
+- Drop the robot and auto-run A* path  
+- Danger heatmap visualization  
+- Real-time animation of robot moving through grid  
+
+---
+
+# 📡 **GPR Scan Analyzer (Coming Soon)**
+Upload a 2D GPR B-Scan CSV → get:
+
+- Heatmap rendering  
+- Frequency spectrum  
+- Depth vs Intensity plot  
+- Automatic anomaly detection  
+- Classification of buried objects  
+
+Uses **Plotly.js / Chart.js** for visualization.
+
+---
+
+# 🛠️ System Architecture
+
+Frontend → React + Tailwind + TypeScript
+Backend → Flask (REST API)
+Database → MongoDB Atlas
+ML Models → scikit-learn pipelines
+Auth → JWT-based
+Deployment → Vercel + Render
+
+markdown
+Copy code
+
+### **High-Level Flow**
+User → React UI → Axios → Flask API  
+→ ML Predictions → Severity Scoring  
+→ Response → UI visualization/animation  
+→ Optional Logging → MongoDB  
+
+---
+
+# ⚙️ Tech Stack
+
+## **Frontend**
+- React + Vite + TypeScript  
+- TailwindCSS  
+- Framer Motion (animations)  
+- ShadCN UI components  
+- Axios  
+- Lucide Icons  
+
+## **Backend**
+- Python Flask  
+- Flask-JWT-Extended  
+- Flask-PyMongo  
+- Flask-CORS  
+- Flasgger (API docs)  
+- NumPy / scikit-learn / joblib  
+
+## **AI / ML**
+- Random Forest  
+- Logistic Regression (baseline)  
+- PCA  
+- Custom severity fusion model  
+- A* Pathfinding  
+
+## **Infrastructure**
+- Render (Flask backend)  
+- Vercel (Frontend)  
+- MongoDB Atlas  
+
+---
+
+# 🔐 Authentication System
+
+### Endpoints
+```
+POST /api/auth/register
+POST /api/auth/login
+```
+
+Returns a JWT token stored in localStorage.
+
+All protected endpoints require:
+Authorization: Bearer <token>
+
+
+---
+
+# 🌐 Deployment URLs
+
+### Frontend  
+👉 https://intellimine.vercel.app
+
+### Backend  
+👉 https://intellimine.onrender.com/api
+
+---
+
+# 🧪 API Endpoints
+
+## 🔍 Mine Detection
+```
+POST /api/predict/mine
+```
+
+### Body:
+```
 {
-  "Metal_Level": 0.75,
-  "Magnetic_Field": 1.02,
-  "Ground_Density": 0.88,
-  "Thermal_Signature": 0.65,
-  "Metal_Mag_Ratio": 1.15,
-  "Metal_Diff": 0.72,
-  "Metal_Mag_Energy": 0.93,
-  "Metal_Mag_Avg": 0.84
+  "input": [8 sensor feature values]
 }
 ```
-**Example Output:**
+🎯 Mine-Type Classification
+```
+POST /api/predict/mine-type
+```
+Body:
+```
+{ "V": 1.2, "H": 0.8, "S": 4 }
+```
+🧭 Safe Path Generator
+```
+POST /api/path/generate
+```
+Body:
 ```
 json
 {
-  "prediction": 1,
-  "probability": 0.89
+  "rows": 30,
+  "cols": 25,
+  "start": [0,0],
+  "goal": [29,24],
+  "mines": [{ "x":10, "y":8, "radius":2, "severity":0.9 }]
 }
 ```
-➡️ Indicates a 89% probability that a landmine is present.
+📦 Installation Guide
 
-
-Input format:
+1️⃣ Clone Repository
 ```
-{
-  "features": [/* numerical values */]
-}
+git clone https://github.com/your-username/Autonomous-Landmine-detector.git
+cd Autonomous-Landmine-detector
 ```
-
-Response:
+🧩 Backend Setup
+Install requirements
 ```
-{"prediction": 0}  // No mine
+pip install -r requirements.txt
 ```
-
-or
+Environment variables
 ```
-{"prediction": 1}  // Mine detected
+JWT_SECRET_KEY=your_secret
+MONGO_URI=mongodb+srv://...
 ```
-## 🌐 Deployment URLs
+Run Flask server
+```
+python main.py
+```
+💻 Frontend Setup
+```
+cd frontend
+npm install
+npm run dev
+```
+Environment variable:
+```
+VITE_API_URL=https://intellimine.onrender.com/api
+```
+📈 Future Enhancements
 
-Frontend → https://intellimine.vercel.app
+📡 Full GPR Analyzer with deep-learning anomaly detection
 
-Backend → https://intellimine.onrender.com/api
+🛰 GPS & real-time map tracking
 
----
-## 📈 Future Enhancements
+🤖 Autonomous drone integration
 
-🧠 Integrate deep learning (CNNs) for improved accuracy
+📝 Advanced mission planner
 
-🌍 Real-time geospatial mapping of detection points
+🧠 CNN-based ground object classification
 
-🛰️ Integration with drone / robot hardware for field testing
+📦 Offline PWA support
 
-📊 Build an analytics dashboard for visualization
 
-> IntelliMine 🤖
+### 💙 Credits
+Designed & Developed by CN Niranjan
+AI/ML + Full Stack + UI/UX + Systems Integration
+
+🏁 Final Note
+IntelliMine is now a complete, production-grade ML weapon-system simulator with:
+-  ✔ Multiple ML models
+-  ✔ A* navigation
+-  ✔ Simulation engines
+-  ✔ Authentication
+-  ✔ Logging
+-  ✔ Real-time animations
+-  ✔ Professional UI
